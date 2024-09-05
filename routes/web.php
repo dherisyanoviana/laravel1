@@ -1,12 +1,14 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\RumahController;
+use App\Htpp\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
+//Route::get('/rumah', [RumahController::class, 'index']);
 
-
-Route::get("/home", [HomeController::class, "index"]);
+Route::get('/book', [BookController::class, 'index']);
