@@ -55,6 +55,10 @@
             background-color: #000000;
             border-color: #413c3c;
         }
+
+        .text {
+            color: #413c3c;
+        }
     </style>
 </head>
 
@@ -71,6 +75,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Hallo, sobat!</h5>
                         <p class="card-text">Lanjutkan jika ingin bergabung.</p>
+                         @if(isset($message))
+                                <p class="text">Warning: {{ $message }}</p>
+                            @else
+                                <p class="text">Tidak ada pesan yang dikirim.</p>
+                            @endif
+                        </div>
                         <a href="#" class="btn btn-primary">KLIK DISINI</a>
                     </div>
                 </div>
