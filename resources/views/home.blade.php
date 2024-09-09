@@ -33,20 +33,20 @@
 
         h1 {
             font-size: 2rem;
-            color: #ee457d;
+            color: #000000;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .description {
             font-size: 1rem;
-            color: #ee457d;
+            color: #000000;
             margin-bottom: 30px;
         }
 
         .box {
             background-color: #fc8fb3;
-            color: #ee457d;
+            color: #000000;
             padding: 20px 40px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -55,20 +55,20 @@
 
         .box h2 {
             font-size: 1.5rem;
-            color: #ee457d;
+            color: #000000;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .box p {
             font-size: 1rem;
-            color: #ee457d;
+            color: #000000;
             margin-bottom: 20px;
         }
 
         button {
             background-color:  #f7a5c1;
-            color: #ee457d;
+            color: #000000;
             padding: 10px 20px;
             border: none;
             border-radius: 20px;
@@ -84,7 +84,7 @@
 
         footer  {
             font-size: 0.9rem;
-            color: #ee457d;
+            color: #000000;
         }
     </style>
 </head>
