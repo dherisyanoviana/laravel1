@@ -1,96 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home Babe</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #b9b6b6;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        .hero {
-            background: linear-gradient(to right, #272727, #413c3c);
-            color: rgb(255, 255, 255);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
+        body {
+            background:#f7a5c1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
         .container {
-            margin-top: -50px;
-        }
-
-        .card {
-            color: rgb(0, 0, 0);
-            border-radius: 8px;
-        }
-
-        .card-body {
             text-align: center;
+            background-color: #f7a5c1;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px #ee457d;
+            width: 80%;
+            max-width: 600px;
         }
 
-        .footer {
-            background: linear-gradient(to right, #272727, #413c3c);
-            color: rgb(255, 255, 255);
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
+        h1 {
+            font-size: 2rem;
+            color: #ee457d;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-       .btn-primary {
-            background-color: #000000;
-            border-color: #413c3c;
+        .description {
+            font-size: 1rem;
+            color: #ee457d;
+            margin-bottom: 30px;
         }
 
-        .text {
-            color: #413c3c;
+        .box {
+            background-color: #fc8fb3;
+            color: #ee457d;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .box h2 {
+            font-size: 1.5rem;
+            color: #ee457d;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 1rem;
+            color: #ee457d;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color:  #f7a5c1;
+            color: #ee457d;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #fc8fb3;
+        }
+
+        footer  {
+            font-size: 0.9rem;
+            color: #ee457d;
         }
     </style>
 </head>
-
 <body>
-    <div class="hero">
-        <h1>SELAMAT DATANG SOBAT!</h1>
-        <p>Website ini dibuat untuk mempermudah mencari informasi.</p>
-    </div>
-
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Hallo, sobat!</h5>
-                        <p class="card-text">Lanjutkan jika ingin bergabung.</p>
-                         @if(isset($message))
-                                <p class="text">Warning: {{ $message }}</p>
-                            @else
-                                <p class="text">Tidak ada pesan yang dikirim.</p>
-                            @endif
-                        </div>
-                        <a href="#" class="btn btn-primary">KLIK DISINI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <h1>WELCOME IN UR HOME!</h1>
+        <p class="description">This website is for finding information.</p>
+         <!-- Menampilkan pesan -->
+                        @if(isset($message))
+                            <p class="box">Message: {{ $message }}</p>
+                        @else
+                            <p class="box">Tidak ada pesan yang dikirim.</p>
+                        @endif
 
-    <div class="footer">
-        <p>&copy; 2024 website ini dilindungi tuhan.</p>
+        <div class="box">
+            <h2>HI FRIENDS!</h2>
+            <p>DO YOU WANT TO JOIN?</p>
+            <button>JOINED</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </footer>
     </div>
 </body>
-
 </html>
