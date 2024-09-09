@@ -37,7 +37,6 @@
         .description {
             font-size: 1rem;
             color: #000000;
-            text-shadow: 0 4px 6px #ee457d;
             text-align: center;
             margin-bottom: 30px;
         }
