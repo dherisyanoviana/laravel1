@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Babe</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Home</title>
 
+    <style>
         body {
-            background:#f7a5c1;
+            background:#fc8fb3;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 50;
         }
 
         .container {
-            text-align: center;
             background-color: #f7a5c1;
+            box-shadow: 0 4px 8px #ee457d;
             padding: 60px;
             border-radius: 20px;
-            box-shadow: 0 4px 8px #ee457d;
             width: 80%;
             max-width: 600px;
         }
@@ -34,6 +28,8 @@
         h1 {
             font-size: 2rem;
             color: #000000;
+            text-shadow: 0 4px 6px #ee457d;
+            text-align: center;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -41,21 +37,36 @@
         .description {
             font-size: 1rem;
             color: #000000;
+            text-align: center;
             margin-bottom: 30px;
         }
 
+        .message {
+            background-color: #fc8fb3;
+            box-shadow: 0 4px 6px #ee457d;
+            color: #ff0000;
+            text-shadow: 0 4px 6px #ff3636;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
         .box {
             background-color: #fc8fb3;
-            color: #000000;
+            box-shadow: 0 4px 6px #ee457d;
+            color: #ff0000;
+            text-shadow: 0 4px 6px #ff3636;
+            text-align: center;
             padding: 20px 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
 
         .box h2 {
             font-size: 1.5rem;
             color: #000000;
+            text-shadow: 0 4px 6px #ee457d;
+            text-align: center;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -63,12 +74,15 @@
         .box p {
             font-size: 1rem;
             color: #000000;
-            margin-bottom: 20px;
+            text-shadow: 0 4px 6px #ee457d;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         button {
-            background-color:  #f7a5c1;
+            background-color: #f7a5c1;
             color: #000000;
+            text-align: center;
             padding: 10px 20px;
             border: none;
             border-radius: 20px;
@@ -79,12 +93,14 @@
         }
 
         button:hover {
-            background-color: #fc8fb3;
+            background-color: #ee457d;
         }
 
         footer  {
             font-size: 0.9rem;
-            color: #000000;
+            color: #ff0000;
+            text-shadow: 0 4px 6px #ff3636;
+            text-align: center;
         }
     </style>
 </head>
@@ -92,12 +108,15 @@
     <div class="container">
         <h1>WELCOME IN UR HOME!</h1>
         <p class="description">This website is for finding information.</p>
-         <!-- Menampilkan pesan -->
-                        @if(isset($message))
-                            <p class="box">Message: {{ $message }}</p>
-                        @else
-                            <p class="box">Tidak ada pesan yang dikirim.</p>
-                        @endif
+
+         <!-- Menampilkan message -->
+         <div class="message">
+            @if(isset($message))
+                <p>Message: {{ $message }}</p>
+            @else
+                <p>No message sent.</p>
+            @endif
+        </div>
 
         <div class="box">
             <h2>HI FRIENDS!</h2>
