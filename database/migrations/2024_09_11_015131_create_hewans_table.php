@@ -4,8 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-use function Laravel\Prompts\table;
-
 return new class extends Migration
 {
     /**
@@ -15,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('hewans', function (Blueprint $table) {
             $table->id();
-            $table->string("jenis_hewan",20);
-            $table->string("jenis_makanan",30);
+            $table->string("jenis_hewan", 20);
+            $table->string("jenis_makanan", 30);
             $table->integer("umur_hewan");
             $table->string("deskripsi")->nullable();
             $table->timestamps();
