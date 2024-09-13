@@ -24,7 +24,7 @@ Route::get('/form', function () {
 //Route::get('/home', [HomeController::class, 'index']); // Untuk menampilkan form
 //st('/home', [HomeController::class, 'submit']); // Untuk mengirim form
 
-Route::post("/create", [TableController::class, "store"]);
+Route::get("/create", [StoreController::class, "store"]);
 
 //Route::get("/show", [HomeController::class, "show"]);
 
@@ -37,3 +37,5 @@ Route::put('/products/{id}', [TableController::class, 'update']);
 Route::delete('/products/{id}', [TableController::class, 'destroy']);
 
 Route::get("/input", [TableController::class, "input"]);
+
+Route::post("/create", [TableController::class, "store"]);

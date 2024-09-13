@@ -44,6 +44,6 @@
     </table>
 
     {{ $Products->links() }}
-    
+
 </body>
 </html>
