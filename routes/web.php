@@ -33,3 +33,5 @@ Route::get("/show", [TableController::class, "show"]);
 Route::get('/products/{id}/edit', [TableController::class, 'edit']);
 
 Route::put('/products/{id}', [TableController::class, 'update']);
+
+Route::delete('/products/{id}', [TableController::class, 'destroy']);
