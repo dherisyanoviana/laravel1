@@ -9,7 +9,7 @@ class TableController extends Controller
 {
     public function show() {
 
-        $Products = Product::all();
+        $Products = Product::Paginate(3);
         return view("tableProduct", compact("Products"));
     }
 
@@ -39,5 +39,9 @@ class TableController extends Controller
         $Product->delete();
 
         return redirect('/show');
+    }
+
+    public function input() {
+        return view("inputProduct");
     }
 }
