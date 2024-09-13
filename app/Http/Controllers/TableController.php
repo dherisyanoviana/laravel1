@@ -17,8 +17,6 @@ class TableController extends Controller
 
         $Product = Product::findOrFail($id);
 
-        @dd($Product);
-
         return view("editProduct", compact("Product"));
     }
 
@@ -36,7 +34,7 @@ class TableController extends Controller
     }
 
     public function destroy($id) {
-        
+
         $Product = Product::findOrFail($id);
         $Product->delete();
 

@@ -37,12 +37,6 @@
                         @method('DELETE')
                         <button type="submit">Hapus</button>
                     </form>
-                    
-                    <form action="/products/{{ $Product->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                    <button type="submit">Hapus</button>
-                    </form>
                 </td>
             </tr>
             @endforeach
