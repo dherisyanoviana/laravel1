@@ -6,10 +6,25 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Product;
 
+
 class StoreController extends Controller
 {
+    //
+    //public function store()
+    //{
+    //$Product = new Product();
+    //$Product->nama = "Laptop";
+    //$Product->harga = "10000";
+    //$Product->stok = "10";
+    //$Product->deskripsi = "Laptop Murah";
+    //$Product->save();
+
+    //return ("data sukses dikirim");
+    //    }
+
     public function store(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'nama' => 'required|string|max:255',
             'harga' => 'required|numeric|min:2',
@@ -28,12 +43,5 @@ class StoreController extends Controller
         $Product->save();
 
         return redirect()->back();
-        //$Product = new Product();
-        //$Product->nama = "Laptop";
-        //$Product->harga = "10000";
-        //$Product->stok = "10";
-       //$Product->deskripsi = "Laptop Murah";
-        //$Product->save();
-        //return ("data sukses dikirim");
     }
 }

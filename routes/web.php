@@ -1,7 +1,7 @@
 <?php
 
-//use App\Http\Controllers\BookController;
-//use App\Http\Controllers\RumahController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\RumahController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\StoreController;
@@ -20,9 +20,8 @@ Route::get('/form', function () {
 //Route::get('/rumah', [RumahController::class, "index"]);
 
 //Route::get('/book', [BookController::class, 'index']);
-
 //Route::get('/home', [HomeController::class, 'index']); // Untuk menampilkan form
-//st('/home', [HomeController::class, 'submit']); // Untuk mengirim form
+//Route::get('/home', [HomeController::class, 'submit']); // Untuk mengirim form
 
 Route::get("/create", [StoreController::class, "store"]);
 

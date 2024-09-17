@@ -9,7 +9,7 @@ class TableController extends Controller
 {
     public function show() {
 
-        $Products = Product::Paginate(3);
+        $Products = Product::paginate(3);
         return view("tableProduct", compact("Products"));
     }
 
