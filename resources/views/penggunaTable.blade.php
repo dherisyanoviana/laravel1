@@ -21,7 +21,7 @@
             <tr>
                 <td>{{ $p->nama }}</td>
                 <td>{{ $p->email }}</td>
-                {{-- <td>{{ $p->ktp->alamat }}</td> --}}
+                {{-- {{ $p->ktp->alamat }}</td>  --}}
             </tr>
             @endforeach
         </tbody>

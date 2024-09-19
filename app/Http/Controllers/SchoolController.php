@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class SchoolController extends Controller
 {
     public function index() {
-        $data= teacher::latses()->get();
+
+        $data = teacher::latest()->get();
         return view("schoolTable", compact("data"));
     }
 }

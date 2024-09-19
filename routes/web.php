@@ -19,15 +19,15 @@ Route::get('/form', function () {
 });
 
 
-//Route::get('/rumah', [RumahController::class, "index"]);
+// Route::get('/rumah', [RumahController::class, "index"]);
 
-//Route::get('/book', [BookController::class, 'index']);
-//Route::get('/home', [HomeController::class, 'index']); // Untuk menampilkan form
-//Route::get('/home', [HomeController::class, 'submit']); // Untuk mengirim form
+Route::get('/book', [BookController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'submit']);
 
 Route::post("/create", [TableController::class, "store"]);
 
-//Route::get("/show", [HomeController::class, "show"]);
+Route::get("/show", [HomeController::class, "show"]);
 
 Route::get("/show", [TableController::class, "show"]);
 
