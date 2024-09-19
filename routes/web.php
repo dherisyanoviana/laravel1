@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\RelasiController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\SchoolController;
 //use App\Models\product;
 use Illuminate\Support\Facades\Route;
 
@@ -41,4 +42,7 @@ Route::get("/input", [TableController::class, "input"]);
 Route::get("/ktp", [RelasiController::class, "index"]);
 
 Route::get("/pengguna/create", [RelasiController::class, "create"]);
-Route::get("/pengguna/store", [RelasiController::class, "store"]);
+
+Route::post("/pengguna/store", [RelasiController::class, "store"]);
+
+Route::get("/school", [SchoolController::class, "index"]);

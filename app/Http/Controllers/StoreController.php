@@ -9,7 +9,7 @@ use App\Models\Product;
 
 class StoreController extends Controller
 {
-    
+
     //public function store()
     //{
     //$Product = new Product();

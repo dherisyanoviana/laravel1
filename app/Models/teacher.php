@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pengguna extends Model
+class teacher extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-    public function ktp() {
-        return $this->hasOne(Ktp::class);
+    public function student() {
+        return $this->hasMany(student::class);
     }
 }
